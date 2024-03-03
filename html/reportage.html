@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css" />
+	<script src="../js/jquery-3.7.1.min.js"></script>
+	<title>Репортажное фото</title>
+</head>
+<body>
+	
+	<script src="../js/add-menu-to-page.js"></script>
+	<script src="../js/menu.js"></script> 
+	<script type="module">
+		import {addPhotosToThePage} from '/js/addPhotosToThePage.js'
+
+		let ForThePage = [];
+		ForThePage.push('../img/reportages/reportage_1.jpg');
+		ForThePage.push('../img/reportages/reportage_2.jpg');
+		ForThePage.push('../img/reportages/reportage_3.jpg');
+		ForThePage.push('../img/reportages/reportage_4.jpg');
+		ForThePage.push('../img/reportages/reportage_5.jpg');
+
+		addPhotosToThePage(ForThePage);
+	</script>
+</body>
+</html>
