@@ -81,10 +81,10 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
 }
 
 let allPages = $(".background-picture");
-for (let i = 0; i <= allPages.length; i++) {
+for (let i = 0; i < allPages.length - 1; i++) {
 	if ($(allPages[i])[0].innerText === "Ню...") {
 		let idElem = $(allPages[i])[0].id;
-		$(`#${idElem}`).append("<p class='warn'>16+</p>");
-		$(".warn").css({"color":"red", "font-size": "40px", margin: "0px", width: "50px"});
+		$(`#${idElem}`).append("<p class='warn'>18+</p>");
+		$(".warn").css({"color":"red", "font-size": "40px", "margin": "0px", "width": "50px"});
 	}
 }
