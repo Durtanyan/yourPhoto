@@ -79,12 +79,3 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
     $(`#background-picture-${i}`).css("height", `${blockHeight}px`);
   }
 }
-
-let allPages = $(".background-picture");
-for (let i = 0; i < allPages.length - 1; i++) {
-	if ($(allPages[i])[0].innerText === "Ню...") {
-		let idElem = $(allPages[i])[0].id;
-		$(`#${idElem}`).append("<p class='warn'>18+</p>");
-		$(".warn").css({"color":"red", "font-size": "40px", "margin": "0px", "width": "50px"});
-	}
-}
