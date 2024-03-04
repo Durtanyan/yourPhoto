@@ -18,8 +18,9 @@ export function addPhotosToThePage(photosForThePage) {
       let marginLeft = (blockWidth - blockWidth / 2) / 2;
       $(`.background-picture`).css("margin-left", marginLeft);
     } else {
-			$("img").css("maxWidth", "100%");
-			$("img").css("maxHeight", "100%");
+			$("img").css("maxWidth", "97%");
+			$("img").css("maxHeight", "97%");
+			$("img").css("padding-top", "5px")
       $(`.background-picture`).css("text-align", "center");
     }
   }
