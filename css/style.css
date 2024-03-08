@@ -1,10 +1,16 @@
+@font-face {
+	font-family: "Bad Script";
+	src: url(../fonts/BadScript-Regular.ttf);
+}
+
 body {
-  background-color: black;
+  background-color: rgb(245, 240, 240);
 }
 
 .background-picture {
   background-size: cover;
   background-repeat: no-repeat;
+	border: 3px solid rgb(135, 133, 133);
 }
 
 .page-title {
@@ -161,4 +167,8 @@ dl, dt, dd{
 
 .burger-menu a{
 	color: black;
+}
+
+.name{
+	color: rgb(240, 213, 38);
 }

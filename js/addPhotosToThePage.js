@@ -14,16 +14,21 @@ export function addPhotosToThePage(photosForThePage) {
       $(`.background-picture`).css("justify-content", "center");
       $(`.background-picture`).css("align-items", "center");
       $(`#background-picture-${i}`).css("height", `${blockHeight}px`);
-      $(`#background-picture-${i}`).css("width", `${blockWidth / 2}px`);
+      $(`#background-picture-${i}`).css({
+        width: `${blockWidth / 2}px`,
+      });
+			// $(`#img${i}`).css({border: "border: 3px solid rgb(135, 133, 133)"});
       let marginLeft = (blockWidth - blockWidth / 2) / 2;
       $(`.background-picture`).css("margin-left", marginLeft);
     } else {
-      $("img").css("maxWidth", "97%");
-      $("img").css("maxHeight", "97%");
-      $("img").css("padding-top", "5px");
+      $("img").css("maxWidth", "100%");
+      $("img").css("maxHeight", "100%");
       $(`.background-picture`).css("text-align", "center");
     }
   }
+  $(`.background-picture`).css({
+    "margin-top": "5px",
+  });
 }
 
 export function theStubPage() {
@@ -45,10 +50,10 @@ export function theStubPage() {
     width: "50%",
     height: "40%",
     "background-color": "red",
-		"font-size": "20px",
-		"color": "white",
-		"border": "5px solid white",
-		"margin": "10% 10% 0% 10%",
-		"border-radius": "5%"
+    "font-size": "20px",
+    color: "white",
+    border: "5px solid white",
+    margin: "10% 10% 0% 10%",
+    "border-radius": "5%",
   });
 }
