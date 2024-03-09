@@ -17,7 +17,6 @@ export function addPhotosToThePage(photosForThePage) {
       $(`#background-picture-${i}`).css({
         width: `${blockWidth / 2}px`,
       });
-			// $(`#img${i}`).css({border: "border: 3px solid rgb(135, 133, 133)"});
       let marginLeft = (blockWidth - blockWidth / 2) / 2;
       $(`.background-picture`).css("margin-left", marginLeft);
     } else {
@@ -47,8 +46,8 @@ export function theStubPage() {
   });
   $(`.the-stub-page`).css("text-align", "center");
   $(`.button-the-stub-page`).css({
-    width: "50%",
-    height: "40%",
+    width: "200px",
+    height: "100px",
     "background-color": "red",
     "font-size": "20px",
     color: "white",

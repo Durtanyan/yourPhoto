@@ -63,12 +63,13 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
     .append(`<div class='background-picture' id=background-picture-${i}>
 	<a class='page-title' href=${linksPages[i]}><p class='page-title'>${namePages[i]}</p></a></>`);
   $(".page-title").css({
-    "font-size": "40px",
+    "font-size": "30px",
     "font-family": "Bad Script",
     "font-weight": "bold",
     "padding-left": "20px",
     color: "white",
   });
+	// $("a").css({"width": "10px",});
   let blockWidth = document.documentElement.clientWidth;
   let blockHeight = document.documentElement.clientHeight;
   let imageUrl;
@@ -76,16 +77,16 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
     imageUrl = pathsToBackgroundPhotosVertical[i];
     $(`#background-picture-${i}`).css({
       "background-image": `url(${imageUrl})`,
-			"margin-top": "5px",
+      "margin-top": "5px",
     });
     $(`#background-picture-${i}`).css("height", `${blockHeight}px`);
-    $(`#background-picture-${i}`).css("width", `${blockWidth / 2}px`);
-    let marginLeft = (blockWidth - blockWidth / 2) / 2;
+    $(`#background-picture-${i}`).css("width", `${blockWidth / 3}px`);
+    let marginLeft = (blockWidth - blockWidth / 3) / 2;
     $(`.background-picture`).css("margin-left", marginLeft);
   } else {
     imageUrl = pathsToBackgroundPhotosVertical[i];
     $(`#background-picture-${i}`).css("background-image", `url(${imageUrl})`);
-    $(`#background-picture-${i}`).css("width", `${blockWidth}px`);
-    $(`#background-picture-${i}`).css("height", `${blockHeight}px`);
+    $(`#background-picture-${i}`).css("width", `${blockWidth - 10}px`);
+    $(`#background-picture-${i}`).css("height", `${blockHeight - 270}px`);
   }
 }
