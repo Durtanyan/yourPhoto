@@ -8,7 +8,7 @@ $(".content-block").css({
 });
 
 let contentBlock = $("#content-block");
-contentBlock.css({ color: "white", padding: "5px" });
+contentBlock.css({ color: "black", padding: "5px" });
 contentBlock.append(`<div><h1>Приветствую вас!</h1> 
 <h2>Меня зовут <span class="name">Ольга Лукина</span> и я ваш фотограф!</h2> 
 <p><strong>Для вас :</strong></p>
