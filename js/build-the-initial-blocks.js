@@ -61,7 +61,9 @@ addMenuToPage();
 for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
   $("#root-block")
     .append(`<div class='background-picture' id=background-picture-${i}>
-	<a class='page-title' href=${linksPages[i]}><p class='page-title'>${namePages[i]}</p></a></>`);
+	<a class='page-title' href=${linksPages[i]}>
+	<p class='page-title'>${namePages[i]}</p>
+	</a></>`);
   $(".page-title").css({
     "font-size": "30px",
     "font-family": "Bad Script",
@@ -69,7 +71,6 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
     "padding-left": "20px",
     color: "white",
   });
-	// $("a").css({"width": "10px",});
   let blockWidth = document.documentElement.clientWidth;
   let blockHeight = document.documentElement.clientHeight;
   let imageUrl;
@@ -85,8 +86,16 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
     $(`.background-picture`).css("margin-left", marginLeft);
   } else {
     imageUrl = pathsToBackgroundPhotosVertical[i];
-    $(`#background-picture-${i}`).css("background-image", `url(${imageUrl})`);
-    $(`#background-picture-${i}`).css("width", `${blockWidth - 10}px`);
-    $(`#background-picture-${i}`).css("height", `${blockHeight - 270}px`);
+    $(`#background-picture-${i}`).css({
+      "background-image": `url(${imageUrl})`,
+      "background-repeat": "no-repeat",
+      "background-size": "contain",
+      maxHeight: "100%",
+      maxWidth: "100%",
+    });
+    $(".background-picture").css({
+      height: `${blockHeight}px`,
+      "text-align": "center",
+    });
   }
 }
