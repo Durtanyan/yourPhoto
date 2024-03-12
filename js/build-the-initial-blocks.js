@@ -59,23 +59,22 @@ function addMenuToPage() {
 
 addMenuToPage();
 for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
-  $("#root-block")
-    .append(`<div class='background-picture' id=background-picture-${i}>
+  let blockWidth = document.documentElement.clientWidth;
+  let blockHeight = document.documentElement.clientHeight;
+  let imageUrl = pathsToBackgroundPhotosVertical[i];
+  if (blockWidth > blockHeight) {
+    $("#root-block")
+      .append(`<div class='background-picture' id=background-picture-${i}>
 	<a class='page-title' href=${linksPages[i]}>
 	<p class='page-title'>${namePages[i]}</p>
 	</a></>`);
-  $(".page-title").css({
-    "font-size": "30px",
-    "font-family": "Bad Script",
-    "font-weight": "bold",
-    "padding-left": "20px",
-    color: "white",
-  });
-  let blockWidth = document.documentElement.clientWidth;
-  let blockHeight = document.documentElement.clientHeight;
-  let imageUrl;
-  if (blockWidth > blockHeight) {
-    imageUrl = pathsToBackgroundPhotosVertical[i];
+    $(".page-title").css({
+      "font-size": "30px",
+      "font-family": "Bad Script",
+      "font-weight": "bold",
+      "padding-left": "20px",
+      color: "white",
+    });
     $(`#background-picture-${i}`).css({
       "background-image": `url(${imageUrl})`,
       "margin-top": "5px",
@@ -85,17 +84,21 @@ for (let i = 0; i < pathsToBackgroundPhotosVertical.length; i++) {
     let marginLeft = (blockWidth - blockWidth / 3) / 2;
     $(`.background-picture`).css("margin-left", marginLeft);
   } else {
-    imageUrl = pathsToBackgroundPhotosVertical[i];
-    $(`#background-picture-${i}`).css({
-      "background-image": `url(${imageUrl})`,
-      "background-repeat": "no-repeat",
-      "background-size": "contain",
-      maxHeight: "100%",
-      maxWidth: "100%",
+    $("#root-block")
+      .append(`<div class='background-picture' id=background-picture-${i}>
+		<a class='page-title' href=${linksPages[i]}>
+		<p class='page-title'>${namePages[i]}</p>
+		<img src=${imageUrl} id=img-${i}>
+		</a></div>`);
+    $("img").css({ maxWidth: "100%", maxHeight: "100%" });
+    $(`.background-picture`).css({
+      "background-color": "black",
+			padding: "15px",
     });
-    $(".background-picture").css({
-      height: `${blockHeight}px`,
-      "text-align": "center",
+    $(".page-title").css({
+      "font-size": "40px",
+      "font-family": "Bad Script",
+      "font-weight": "bold",
     });
   }
 }

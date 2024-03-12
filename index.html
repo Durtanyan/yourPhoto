@@ -17,12 +17,11 @@
         if ($(allPages[i])[0].innerText === "Ню...") {
           let idElem = $(allPages[i])[0].id;
           $(`#${idElem}`).append("<p class='warn'>18+</p>");
-					console.log($(".warn"));
           $(".warn").css({
             color: "red",
             "font-size": "40px",
             "margin-left": "10px",
-						"margin-top": "0px",
+						"margin": "0px",
             width: "50px",
           });
         }
